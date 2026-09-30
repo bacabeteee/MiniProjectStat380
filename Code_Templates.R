@@ -4,6 +4,12 @@
 library(tidverse)
 library(tidymodels)
 
+# Binary Predictor
+DF_NAME <- DF_NAME |>
+  mutate(
+    PV_NEW = if_else(PV == "TRUE", 1, 0, missing = NA_real_) # missing = NA_real_ Converts NA to numeric NA.
+  )
+
 # Single Variable
 model1 <- lm(RV ~ PV, data = DF_NAME)
 
