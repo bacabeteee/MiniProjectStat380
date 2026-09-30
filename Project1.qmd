@@ -1,0 +1,265 @@
+---
+title: "Project 1"
+author: "Alexandre Snyder, Kunal Ghosh, Seokyoung Kim"
+output: html_document
+self-contained: true
+---
+
+# Libraries
+```{r}
+library(tidyverse)
+library(tidymodels)
+```
+
+# Data Load / Wrangling
+```{r}
+population <- read_csv("data/raw/pop.csv") |>
+  select(geo, name, population = `2025`)
+
+life_expectancy <- read_csv("data/raw/lex.csv") |>
+  select(geo, name, life_expectancy = `2025`)
+
+sanitation_access <- read_csv("data/raw/at_least_basic_sanitation_overall_access_percent.csv") |>
+  select(geo, name, sanitation_access_pct = `2024`)
+
+murder_deaths <- read_csv("data/raw/murder_total_deaths.csv") |>
+  select(geo, name, murder_total_deaths = `2023`)
+
+food_supply <- read_csv("data/raw/food_supply_kilocalories_per_person_and_day.csv") |>
+  select(geo, name, food_supply_kcal_per_person_day = `2022`)
+
+child_deaths <- read_csv("data/raw/number_of_child_deaths.csv") |>
+  select(geo, name, number_of_child_deaths = `2022`)
+
+female_head_of_state <- read_csv("data/raw/female_hos.csv") |>
+  select(geo, name, female_head_of_state = `2021`)
+
+project1_2025 <- life_expectancy |>
+  left_join(population, by = c("geo", "name")) |>
+  left_join(sanitation_access, by = c("geo", "name")) |>
+  left_join(murder_deaths, by = c("geo", "name")) |>
+  left_join(food_supply, by = c("geo", "name")) |>
+  left_join(child_deaths, by = c("geo", "name")) |>
+  left_join(female_head_of_state, by = c("geo", "name"))
+
+# Converts raw counts into population-adjusted rates so countries can be compared
+# fairly regardless of their population size.
+project1_2025 <- project1_2025 |>
+  mutate(murder_deaths_per_100k = (murder_total_deaths / population) * 100000,
+         child_deaths_per_100k = (number_of_child_deaths / population) * 100000)
+
+project1_2025 <- project1_2025 |>
+  mutate(female_hos_binary = if_else(female_head_of_state == "Had a female head of state", 1, 0, missing = NA_real_))
+
+# Delete unnecessary columns
+project1_2025 <- project1_2025 |>
+  select(-murder_total_deaths, -number_of_child_deaths, -population, -female_head_of_state)
+```
+
+# Exploratory Data Analysis
+
+The analytic data set has one row per country (n = 194). The `geo` and `name` columns are nominal identifier variables. `geo` contains a unique
+three-letter country code and `name` contains a unique country name. Neither has missing values.
+
+The response and four continuous predictors are quantitative, and`female_hos_binary` is categorical. The female-head-of-state indicator has 78 missing values, sanitation has 17 missing values, and food supply has 11 missing values while life expectancy and the two death rates are missing for only one country each.
+
+## Response variable: life expectancy
+
+```{r}
+summary(life_expectancy)
+```
+```{r}
+project1_2025 |>
+  ggplot(aes(x = life_expectancy)) +
+  geom_histogram() +
+  labs(
+    title = "Distribution of life expectancy across countries",
+    x = "Life expectancy (years)",
+    y = "Number of countries")
+```
+
+The mean is 73.62 years, and the median is slightly higher at 74.97 years (SD = 6.96). Countries are not all clustered around the same life expectancy.
+
+## Predictor: overall access to basic sanitation
+
+```{r}
+summary(sanitation_access)
+```
+
+```{r}
+project1_2025 |>
+  ggplot(aes(x = sanitation_access_pct)) +
+  geom_histogram() +
+  labs(
+    title = "Distribution of basic sanitation access",
+    x = "Population with at least basic sanitation (%)",
+    y = "Number of countries")
+```
+
+```{r}
+project1_2025 |>
+  ggplot(aes(x = sanitation_access_pct, y = life_expectancy)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Life expectancy and basic sanitation access",
+    x = "Population with at least basic sanitation (%)",
+    y = "Life expectancy (years)"
+  )
+```
+
+The mean is 79.49% and SD of 26.51 percentage points. The scatterplot shows a strong positive linear association with life expectancy, which means countries with greater sanitation access tend to have longer life expectancy.
+
+## Predictor: food supply
+
+```{r}
+summary(food_supply)
+```
+
+```{r}
+project1_2025 |>
+  ggplot(aes(x = food_supply_kcal_per_person_day)) +
+  geom_histogram() +
+  labs(
+    title = "Distribution of daily food supply",
+    x = "Food supply (kilocalories per person per day)",
+    y = "Number of countries"
+  )
+```
+
+```{r}
+project1_2025 |>
+  ggplot(aes(x = food_supply_kcal_per_person_day, y = life_expectancy)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Life expectancy and daily food supply",
+    x = "Food supply (kcal per person per day)",
+    y = "Life expectancy (years)"
+  )
+```
+
+The mean is 2,941 kilocalories per person per day with an SD of 480.43. The scatterplot shows a positive association with life expectancy but there is big vertical spread at similar food supply levels.
+
+## Predictor: murder deaths per 100,000 people
+
+```{r}
+project1_2025 |>
+select(murder_deaths_per_100k) |>
+  summary()
+```
+
+```{r}
+project1_2025 |>
+  ggplot(aes(x = murder_deaths_per_100k)) +
+  geom_histogram() +
+  labs(
+    title = "Distribution of murder death rates",
+    x = "Murder deaths per 100,000 people",
+    y = "Number of countries"
+  )
+```
+
+```{r}
+project1_2025 |>
+  ggplot(aes(x = murder_deaths_per_100k, y = life_expectancy)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Life expectancy and murder death rates",
+    x = "Murder deaths per 100,000 people",
+    y = "Life expectancy (years)"
+  )
+```
+
+The mean is 7.66 and the SD is 10.45. The relationship with life expectancy is negative but not strong. The wide scatter shows murder death rate alone is unlikely to explain the variation in life expectancy.
+
+## Predictor: child deaths per 100,000 people
+
+```{r}
+project1_2025 |>
+select(child_deaths_per_100k) |>
+  summary()
+```
+
+```{r}
+project1_2025 |>
+  ggplot(aes(x = child_deaths_per_100k)) +
+  geom_histogram() +
+  labs(
+    title = "Distribution of child death rates",
+    x = "Child deaths per 100,000 people",
+    y = "Number of countries"
+  )
+```
+
+```{r}
+project1_2025 |>
+  ggplot(aes(x = child_deaths_per_100k, y = life_expectancy)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Life expectancy and child death rates",
+    x = "Child deaths per 100,000 people",
+    y = "Life expectancy (years)"
+  )
+```
+
+The mean is 62.15 and the SD is 83.51. The scatterplot shows a strong negative association with life expectancy.
+
+## Predictor: female head of state
+
+```{r}
+project1_2025 |>
+  ggplot(aes(x = factor(female_hos_binary))) +
+  geom_bar() +
+  labs(
+    x = "Female head of state",
+    y = "Number of countries"
+  )
+```
+
+`female_hos_binary` is a categorical, binary variable based on the 2021 female-head-of-state indicator. 0 means the country did not have a female head of state, and 1 means it did. There are 78 missing values. Of the 116 observed records, 114 were 0 and only two were coded 1.
+This variable cannot support a reliable comparison due to the significant amount of missing values and imbalance.
+
+# Linear Models
+```{r}
+model1 <- lm(life_expectancy ~ sanitation_access_pct, data = project1_2025)
+model2 <- lm(life_expectancy ~ sanitation_access_pct + food_supply_kcal_per_person_day, data = project1_2025)
+model3 <- lm(life_expectancy ~ sanitation_access_pct + food_supply_kcal_per_person_day + murder_deaths_per_100k + child_deaths_per_100k + female_hos_binary, data = project1_2025)
+```
+
+# Summary
+## Model 1
+```{r}
+summary(model1)
+```
+
+## Model 2
+```{r}
+summary(model2)
+```
+
+## Model 3
+```{r}
+summary(model3)
+```
+
+# LINE Assumptions
+## Model 1
+```{r}
+plot(model1, which = 1)
+plot(model1, which = 2)
+```
+
+## Model 2
+```{r}
+plot(model2, which = 1)
+plot(model2, which = 2)
+```
+
+## Model 3
+```{r}
+plot(model3, which = 1)
+plot(model3, which = 2)
+```
