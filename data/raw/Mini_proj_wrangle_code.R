@@ -1,53 +1,28 @@
-library(dplyr)
-library(gapminder)
+library(tidyverse)
 
+life_expectancy <- read_csv("data/raw/lex.csv") |>
+  select(geo, name, life_expectancy = `2025`)
 
-masterGAP <- read.csv("gapminder_2025.csv")
-lexGAP <- read.csv("lex.csv")
-femHOSGAP <- read.csv("female_hos.csv")
-cdGAP <- read.csv("number_of_child_deaths.csv")
-foodGAP <- read.csv("food_supply_kilocalories_per_person_and_day.csv")
-murderGAP <- read.csv("murder_total_deaths.csv")
-sanitationGAP <- read.csv("at_least_basic_sanitation_overall_access_percent.csv")
+sanitation_access <- read_csv("data/raw/at_least_basic_sanitation_overall_access_percent.csv") |>
+  select(geo, name, sanitation_access_pct = `2024`)
 
-femHOSGAP <- femHOSGAP |> 
-  select(geo, X2021) |>
- rename(fem2021 = X2021)
+murder_deaths <- read_csv("data/raw/murder_total_deaths.csv") |>
+  select(geo, name, murder_total_deaths = `2023`)
 
-cdGAP <- cdGAP |> 
-  select(geo, X2022) |>
-rename(cd2022 = X2022)
+food_supply <- read_csv("data/raw/food_supply_kilocalories_per_person_and_day.csv") |>
+  select(geo, name, food_supply_kcal_per_person_day = `2022`)
 
-foodGAP <- foodGAP |> 
-  select(geo, X2022) |>
-rename(food2022 = X2022)
+child_deaths <- read_csv("data/raw/number_of_child_deaths.csv") |>
+  select(geo, name, number_of_child_deaths = `2022`)
 
-murderGAP <- murderGAP |> 
-  select(geo, X2023)
-rename(murder2023 = X2023)
+female_head_of_state <- read_csv("data/raw/female_hos.csv") |>
+  select(geo, name, female_head_of_state = `2021`)
 
-sanitationGAP <- sanitationGAP |> 
-  select(geo, X2024)
-rename(sanitation2024 = X2024)
+project1_2025 <- life_expectancy |>
+  left_join(sanitation_access, by = c("geo", "name")) |>
+  left_join(murder_deaths, by = c("geo", "name")) |>
+  left_join(food_supply, by = c("geo", "name")) |>
+  left_join(child_deaths, by = c("geo", "name")) |>
+  left_join(female_head_of_state, by = c("geo", "name"))
 
-
-
-masterGAP <- masterGAP |>
-  left_join(femHOSGAP, by = "geo")
-
-masterGAP <- masterGAP |>
-  left_join(cdGAP, by = "geo")
-
-masterGAP <- masterGAP |>
-  left_join(foodGAP, by = "geo")
-
-masterGAP <- masterGAP |>
-  left_join(murderGAP, by = "geo")
-
-masterGAP <- masterGAP |>
-  left_join(sanitationGAP, by = "geo")
-
-df <- df |> 
-  rename(id = emp_id, name = emp_name, department = dept)
-
-
+write_csv(project1_2025, "data/project1_2025_merged.csv")

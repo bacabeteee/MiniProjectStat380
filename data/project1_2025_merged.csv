@@ -1,0 +1,195 @@
+geo,name,life_expectancy,sanitation_access_pct,murder_total_deaths,food_supply_kcal_per_person_day,number_of_child_deaths,female_head_of_state
+afg,Afghanistan,69.02,54.4958,2269.72,2243.49,73040,Never had a female head of state
+ago,Angola,64.7,NA,1757.55,2434.79,90017,Never had a female head of state
+alb,Albania,80,99.29972,83.34,3390.48,256,Never had a female head of state
+and,Andorra,84.2,100,0.55,NA,1,Never had a female head of state
+are,UAE,80.39,99.08688,55.18,3321.43,576,Never had a female head of state
+arg,Argentina,77.9,NA,2453.14,3347.34,5064,NA
+arm,Armenia,79.92,93.66494,73.07,3276.83,296,Never had a female head of state
+atg,Antigua and Barbuda,78.1,99.60572,3.64,2458.4,7,Never had a female head of state
+aus,Australia,84.2,100,248.08,3470.69,1068,NA
+aut,Austria,82.2,99.9721,57.52,3812.18,246,NA
+aze,Azerbaijan,72.89,98.97851,312.02,3327.53,1451,Never had a female head of state
+bdi,Burundi,62.09,44.63399,247.9,1754.83,21569,NA
+bel,Belgium,82.4,99.48622,121.49,3909.12,406,NA
+ben,Benin,66.53,22.24897,1066.35,2785.64,37736,Never had a female head of state
+bfa,Burkina Faso,68.14,31.79635,2068.27,2675.05,59668,Never had a female head of state
+bgd,Bangladesh,71.58,67.61718,3897.29,2580.79,74294,NA
+bgr,Bulgaria,76.3,86.07656,126.19,3055.05,355,NA
+bhr,Bahrain,77.48,100,20.76,3505.98,108,Never had a female head of state
+bhs,Bahamas,73.09,NA,151.48,2619.86,53,Never had a female head of state
+bih,Bosnia and Herzegovina,78,NA,43.24,3368.04,152,Never had a female head of state
+blr,Belarus,74.9,99.74735,350.06,3330.2,222,Never had a female head of state
+blz,Belize,75.51,84.30177,104.58,2815.42,86,Never had a female head of state
+bol,Bolivia,72.21,71.58392,776.62,2331.38,5951,NA
+bra,Brazil,77.31,92.40127,52229.21,3304.87,37373,NA
+brb,Barbados,77,98.09246,39,3197.51,35,NA
+brn,Brunei,78.51,100,4.27,NA,70,Never had a female head of state
+btn,Bhutan,73.1,86.84211,8.33,3215.3,235,Never had a female head of state
+bwa,Botswana,70.3,72.11546,245.24,2621.79,2573,Never had a female head of state
+caf,Central African Republic,55.48,14.03628,801.14,2210.19,21618,NA
+can,Canada,82.2,98.58788,540.66,3606.14,1750,NA
+che,Switzerland,84.6,99.89987,41.24,3452.57,330,Never had a female head of state
+chl,Chile,81.1,100,689.56,3105.59,1252,NA
+chn,China,80.51,97.27188,7014.42,3452.19,76409,NA
+civ,Cote d'Ivoire,64.72,40.40707,3341.01,2953.26,68047,Never had a female head of state
+cmr,Cameroon,62.49,47.07295,2300.6,2839.93,60462,Never had a female head of state
+cod,"Congo, Dem. Rep.",61.6,16.30331,5225.69,2150.06,292098,Never had a female head of state
+cog,"Congo, Rep.",64.09,NA,362.06,2190.54,8836,Never had a female head of state
+col,Colombia,80.51,96.58202,15959.03,3112.41,9254,Never had a female head of state
+com,Comoros,76.76,57.22309,73,2416.25,1387,Never had a female head of state
+cpv,Cape Verde,76,83.12792,57.94,2641.64,133,Never had a female head of state
+cri,Costa Rica,79.79,98.78884,644.16,2941.76,484,NA
+cub,Cuba,78.4,94.77035,765.1,3270.16,497,Never had a female head of state
+cyp,Cyprus,80.89,99.47768,15.45,3037.47,32,Never had a female head of state
+cze,Czech Republic,80.2,99.07005,93.69,3425.73,291,Never had a female head of state
+deu,Germany,81.2,99.22695,304.82,3603.83,2666,NA
+dji,Djibouti,68.81,NA,184.72,2765.91,1217,Never had a female head of state
+dma,Dominica,76.53,NA,7.68,3012.71,32,NA
+dnk,Denmark,81.8,99.59723,34.24,3592.18,234,NA
+dom,Dominican Republic,73.3,90.11982,1703.94,3228.44,6023,Never had a female head of state
+dza,Algeria,76.4,85.90649,498.52,3468.29,18308,Never had a female head of state
+ecu,Ecuador,77.1,91.20434,4385.92,2548.96,3747,NA
+egy,Egypt,70.39,97.08613,1073.65,3116.13,43445,Never had a female head of state
+eri,Eritrea,63.45,NA,1868.83,NA,3822,Never had a female head of state
+esp,Spain,83.5,99.91812,254.56,3375.29,994,Never had a female head of state
+est,Estonia,79,99.02149,45.69,3297.53,33,NA
+eth,Ethiopia,65.28,10.35772,11634.19,2480.74,166026,NA
+fin,Finland,82,99.44795,71.84,3377.7,90,NA
+fji,Fiji,68,92.75429,27.29,2949.28,380,Never had a female head of state
+fra,France,82.9,98.64438,648.16,3595.02,2570,NA
+fsm,"Micronesia, Fed. Sts.",67.3,NA,7.67,2755.05,53,Never had a female head of state
+gab,Gabon,67.39,57.4015,76.52,2551.79,2548,NA
+gbr,UK,81.3,99.10266,250.26,3355.3,2536,NA
+geo,Georgia,75,90.68069,80.86,3105.96,449,NA
+gha,Ghana,65.8,31.57894,2718.38,3102.4,37482,Never had a female head of state
+gin,Guinea,62.91,32.64964,1214.14,2913.22,40997,Never had a female head of state
+gmb,Gambia,67.71,48.17114,65.07,2452.26,3765,Never had a female head of state
+gnb,Guinea-Bissau,61.49,28.9416,279.77,2291.09,4503,NA
+gnq,Equatorial Guinea,61.68,NA,80.22,NA,3442,Never had a female head of state
+grc,Greece,81.3,99.00726,86.25,3398.04,304,NA
+grd,Grenada,75.5,92.61924,5.55,2612.97,29,Never had a female head of state
+gtm,Guatemala,73.5,71.1697,3372.82,2791.06,8717,Never had a female head of state
+guy,Guyana,69.2,91.30872,123.02,3253.19,456,NA
+hnd,Honduras,76.41,87.67179,3010.98,2654.33,3254,Never had a female head of state
+hrv,Croatia,78.9,NA,43.37,3316.79,135,NA
+hti,Haiti,61.38,29.10812,6678.76,1977.9,14605,NA
+hun,Hungary,77.1,97.97363,120.65,3430.12,366,Never had a female head of state
+idn,Indonesia,72.81,88.20317,3518.57,2829.9,93904,NA
+ind,India,72.1,83.38087,44288.39,2588.62,731370,NA
+irl,Ireland,82.8,89.72561,22.15,3910.78,171,NA
+irn,Iran,79.21,90.45829,2365.8,2878.56,14282,Never had a female head of state
+irq,Iraq,71.3,98.50475,6418.03,2685.2,24870,Never had a female head of state
+isl,Iceland,83,98.778,1.97,3676.9,10,NA
+isr,Israel,83.7,99.92008,169.16,3922.66,577,NA
+ita,Italy,83.3,99.8849,276.12,3703.49,1104,Never had a female head of state
+jam,Jamaica,76.31,91.62646,942.57,2928.06,423,NA
+jor,Jordan,78.8,96.41479,293.32,2557.24,3517,Never had a female head of state
+jpn,Japan,84.4,99.94331,597.27,2692.62,1887,Never had a female head of state
+kaz,Kazakhstan,75.2,97.94474,1024.47,3439.57,3841,Never had a female head of state
+ken,Kenya,70.34,40.88497,7698.45,2099.58,55710,Never had a female head of state
+kgz,Kyrgyz Republic,75.51,98.5399,141.37,2761.34,2280,NA
+khm,Cambodia,73.41,83.33593,475.16,2724.26,7662,Never had a female head of state
+kir,Kiribati,71.41,45.17351,0.79,3095.73,161,Never had a female head of state
+kna,St. Kitts and Nevis,75.11,NA,8.59,2866.74,8,Never had a female head of state
+kor,South Korea,83.6,99.72935,501.68,3441.95,799,NA
+kwt,Kuwait,81.5,100,41.35,3507.92,333,Never had a female head of state
+lao,Lao,66.58,88.73141,470.42,3168.75,6108,Never had a female head of state
+lbn,Lebanon,79.2,99.2,76.71,2926.45,577,Never had a female head of state
+lbr,Liberia,61.8,23.3352,328.3,2103.35,11705,NA
+lby,Libya,74.05,88.49915,174.71,3195,1155,Never had a female head of state
+lca,St. Lucia,77.72,NA,33.83,2720.6,49,Never had a female head of state
+lie,Liechtenstein,NA,99.95,NA,NA,2,Never had a female head of state
+lka,Sri Lanka,77,95.35302,384.46,2802,1925,NA
+lso,Lesotho,58.71,47.89135,903.81,1805.54,5060,Never had a female head of state
+ltu,Lithuania,76.9,96.39656,103.27,3406.98,78,NA
+lux,Luxembourg,83.5,97.60117,3.27,3483.01,14,Never had a female head of state
+lva,Latvia,76.1,92.53461,98.69,3312.72,61,NA
+mar,Morocco,73.39,87.77802,289.37,3327.78,10835,Never had a female head of state
+mco,Monaco,80.59,100,0.13,NA,1,Never had a female head of state
+mda,Moldova,76.32,86.88286,161.17,2888.71,595,NA
+mdg,Madagascar,62.89,15.36715,950.01,1978.61,39201,NA
+mdv,Maldives,76.57,99.7013,7.28,2652.54,51,Never had a female head of state
+mex,Mexico,76.6,92.99128,36444.6,3326.33,23913,Never had a female head of state
+mhl,Marshall Islands,64.39,78.95856,1.91,3269.53,23,NA
+mkd,North Macedonia,77.3,98.99759,28.46,3148.14,127,Never had a female head of state
+mli,Mali,64.13,47.75617,2215.89,2792.42,74482,NA
+mlt,Malta,83.3,100,4.38,3298.05,26,NA
+mmr,Myanmar,65.79,74.18352,1053.79,2807.13,37100,NA
+mne,Montenegro,77.4,97.84913,14.76,3573.56,11,Never had a female head of state
+mng,Mongolia,73.61,74.28065,196.18,3088.1,741,NA
+moz,Mozambique,65.31,38.59008,2519.03,2154.92,78922,Never had a female head of state
+mrt,Mauritania,68.5,58.67692,265.97,3000.3,9841,Never had a female head of state
+mus,Mauritius,74.19,97.37374,14.24,3111.1,209,NA
+mwi,Malawi,62.28,49.23221,3540.43,2642.51,24225,NA
+mys,Malaysia,76.7,96.02,547.25,3003.3,3531,Never had a female head of state
+nam,Namibia,66.7,38.7229,1065.01,2586.32,2855,Never had a female head of state
+ner,Niger,59.68,16.33605,2919.12,2631.12,80237,Never had a female head of state
+nga,Nigeria,64.86,47.90194,18187.61,2503.4,834255,Never had a female head of state
+nic,Nicaragua,77.11,NA,584.83,2694.15,2024,NA
+nld,Netherlands,82.2,97.65667,120.01,3535.61,615,Never had a female head of state
+nor,Norway,83.3,98.04705,30.75,3504.55,108,NA
+npl,Nepal,74.02,86.02598,526.75,2930.74,14682,NA
+nru,Nauru,59.29,71.32114,0.94,2993.46,9,Never had a female head of state
+nzl,New Zealand,81.9,100,102.03,3147.3,297,NA
+omn,Oman,77.48,99.32093,27.6,3063.95,798,Never had a female head of state
+pak,Pakistan,70.31,71.88286,6078.99,2442.99,383828,NA
+pan,Panama,79.6,89.05404,668.25,3061.49,1051,NA
+per,Peru,77.5,78.7732,1871.85,2805.49,7101,Never had a female head of state
+phl,Philippines,72.41,87.15274,9326.91,2848.81,62689,NA
+plw,Palau,69.1,99.02487,1.26,NA,4,Never had a female head of state
+png,Papua New Guinea,66.6,23.57434,615.46,2223.03,10545,Never had a female head of state
+pol,Poland,79,98.95617,417.49,3615.99,1531,NA
+prk,North Korea,74,NA,733.01,NA,5773,Never had a female head of state
+prt,Portugal,82.3,99.65918,134.87,3510.48,230,NA
+pry,Paraguay,73.3,95.93476,902.25,3055.96,2634,Never had a female head of state
+pse,Palestine,73.88,99.39502,179.14,NA,2346,Never had a female head of state
+qat,Qatar,81.7,99.93655,10.04,3540.22,147,Never had a female head of state
+rou,Romania,76.6,90.54136,287.75,3623.41,1310,NA
+rus,Russia,73.5,92.21759,16759.91,3453.98,7768,Never had a female head of state
+rwa,Rwanda,65.08,81.33073,766.55,2315.15,15091,NA
+sau,Saudi Arabia,74.97,97.6075,383.33,3276.21,3997,Never had a female head of state
+sdn,Sudan,69.32,65.7086,521.53,2648.02,78807,Never had a female head of state
+sen,Senegal,70.61,62.5196,306.87,2825.66,17232,NA
+sgp,Singapore,85.71,100,31.6,NA,93,NA
+slb,Solomon Islands,63.97,34.64907,26.22,2306.43,387,Never had a female head of state
+sle,Sierra Leone,59.28,24.91364,893.67,2316.5,25369,Never had a female head of state
+slv,El Salvador,73.51,88.04112,3481.86,2835.79,1173,Never had a female head of state
+smr,San Marino,85.3,100,0.05,NA,NA,Never had a female head of state
+som,Somalia,65.13,44.45684,4659.02,1833.48,73955,Never had a female head of state
+srb,Serbia,76.3,97.9423,153.95,3612.06,376,NA
+ssd,South Sudan,56.69,14.42824,2856.77,2414.74,27961,Never had a female head of state
+stp,Sao Tome and Principe,70.7,48.67851,12.55,2376.69,101,NA
+sur,Suriname,73.4,89.99827,58.63,2652.09,198,Never had a female head of state
+svk,Slovak Republic,78.6,97.54296,88.07,2982.81,312,NA
+svn,Slovenia,81.9,98.31116,14.79,3093.59,31,NA
+swe,Sweden,83.6,98.74319,98.18,3327.75,274,Never had a female head of state
+swz,Eswatini,61.08,64.4605,519.43,2553.29,1417,Never had a female head of state
+syc,Seychelles,75.31,99.7,3.53,3222.29,22,Never had a female head of state
+syr,Syria,76.34,95.64843,879.24,2387.19,8794,Never had a female head of state
+tcd,Chad,58.32,13.14153,1911.1,2183.68,73599,Never had a female head of state
+tgo,Togo,64.91,25.16811,694.87,2596.24,16668,NA
+tha,Thailand,77.91,99.35049,3586.44,2878.04,5288,NA
+tjk,Tajikistan,72.1,NA,199.66,2768.39,6936,Never had a female head of state
+tkm,Turkmenistan,71.3,99.73545,186.93,2834.63,5073,Never had a female head of state
+tls,Timor-Leste,70.31,72.9358,48.39,2268.71,1231,Never had a female head of state
+ton,Tonga,72,93.93345,1.04,2965.65,26,Never had a female head of state
+tto,Trinidad and Tobago,73.4,94.17807,361.24,2916.47,286,NA
+tun,Tunisia,76,98.53734,132.33,3471.78,3085,Never had a female head of state
+tur,Turkey,76.69,99.2777,1607.42,3861.09,11152,NA
+tuv,Tuvalu,63.58,89.67445,0.8,2971.6,5,Never had a female head of state
+tza,Tanzania,69.81,37.21936,4261.41,2357.7,98306,Had a female head of state
+uga,Uganda,65.98,23.89639,5329.76,2166.36,69265,Never had a female head of state
+ukr,Ukraine,73.98,97.72583,2893.97,2851.49,2584,NA
+ury,Uruguay,77.8,99.15079,284.08,3306.88,250,Never had a female head of state
+usa,USA,78.8,99.61827,24528.04,3912.14,21952,Never had a female head of state
+uzb,Uzbekistan,72.8,96.54783,569.96,3271.8,10905,Never had a female head of state
+vct,St. Vincent and the Grenadines,75.42,NA,23.57,2963.28,20,Never had a female head of state
+ven,Venezuela,72.1,98.39559,11582.86,2318.07,9966,Never had a female head of state
+vnm,Vietnam,76.41,95.44703,1617.32,3072.19,27352,Never had a female head of state
+vut,Vanuatu,70.59,47.81415,1.64,2785.79,211,Never had a female head of state
+wsm,Samoa,72.8,97.0991,9.62,3063.19,96,Had a female head of state
+yem,Yemen,72.01,63.08273,672.6,2083.24,60119,NA
+zaf,South Africa,66.9,77.38452,23066.35,2761.01,39460,NA
+zmb,Zambia,61.87,37.47634,3231.5,2158.13,35391,NA
+zwe,Zimbabwe,66.83,34.6415,2890.83,2040.51,25773,NA
