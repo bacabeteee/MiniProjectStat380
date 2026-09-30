@@ -35,8 +35,11 @@ project1_2025 <- project1_2025 |>
   mutate(murder_deaths_per_100k = (murder_total_deaths / population) * 100000,
          child_deaths_per_100k = (number_of_child_deaths / population) * 100000)
 
+project1_2025 <- project1_2025 |>
+  mutate(female_hos_binary = if_else(female_head_of_state == "Had a female head of state", 1, 0, missing = NA_real_))
+
 # Delete unnecessary columns
 project1_2025 <- project1_2025 |>
-  select(-murder_total_deaths, -number_of_child_deaths, -population)
+  select(-murder_total_deaths, -number_of_child_deaths, -population, -female_head_of_state)
 
 write_csv(project1_2025, "data/project1_2025_merged.csv")
