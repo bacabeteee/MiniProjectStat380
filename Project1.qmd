@@ -263,3 +263,31 @@ plot(model2, which = 2)
 plot(model3, which = 1)
 plot(model3, which = 2)
 ```
+
+## What is the best model?
+Model 2. It has highest adjusted r squared value ($R^2_{adj} = 0.710$), lowest residual standard error ($RSE = 3.77$), and its predictor variables are statistically significant ($p < 0.05$). Although there is a curvature in Residuals vs. Fitted plot and tail movement in Q-Q residuals plot, it is the most balanced one among the three models.
+
+# Our Question
+**Is there any association between child deaths and food supply?**
+
+## Visualization
+```{r}
+project1_2025 |>
+  ggplot(aes(x = food_supply_kcal_per_person_day, y = child_deaths_per_100k)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Food supply and child death rates",
+    x = "Food supply (kcal per person per day)",
+    y = "Child deaths per 100,000 people"
+  )
+```
+
+## Linear Model
+```{r}
+model0 <- lm(child_deaths_per_100k ~ food_supply_kcal_per_person_day, data = project1_2025)
+summary(model0)
+```
+
+## Answer
+There is a statistically significant negative association. The fitted model estimates that an additional 100 kilocalories per person per day is associated with about 11.3 fewer child deaths per 100,000 people. Food supply explains about 41% of the variation in child-death rates ($R^2 = 0.412$). This is an association, not proof that food supply causes lower child mortality.
